@@ -1,0 +1,31 @@
+{
+  "name": "quacker",
+  "version": "1.0.0",
+  "description": "Twitter clone on steroids",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --use_strict index.js",
+    "test": "tape"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezpn/quacker.git"
+  },
+  "keywords": [
+    "twitter",
+    "quacker"
+  ],
+  "author": "Adam Urban",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ezpn/quacker/issues"
+  },
+  "homepage": "https://github.com/ezpn/quacker#readme",
+  "dependencies": {
+    "koa": "^2.3.0",
+    "koa-router": "^7.2.1",
+    "sequelize": "^4.4.2",
+    "sqlite3": "^3.1.8",
+    "winston": "^2.3.1"
+  }
+}

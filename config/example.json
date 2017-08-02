@@ -1,0 +1,23 @@
+{
+  "host": "localhost",
+  "port": 4000,
+  "db": {
+    "database": "database",
+    "username": "username",
+    "password": "password",
+    "options": {
+      "host": "localhost",
+      "dialect": "sqlite",
+      "pool": {
+        "max": 200,
+        "min": 0,
+        "idle": 10000
+      },
+      "storage": "../db/database.sqlite"
+    },
+    "force": true
+  },
+  "logging": {
+    "level": "silly"
+  }
+}
