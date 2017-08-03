@@ -93,3 +93,6 @@ config/*.json
 
 # Database
 db/
+
+# Generated public files
+web/
