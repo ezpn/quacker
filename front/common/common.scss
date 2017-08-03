@@ -1,0 +1,72 @@
+@import 'variables';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav {
+  width: 100%;
+  padding: 0 20px;
+  height: $navbar-height;
+  border-bottom: 1px solid $very-light;
+  #logo {
+    margin: 0;
+    padding: 0;
+    line-height: $navbar-height;
+    cursor: pointer;
+  }
+  ul {
+    display: inline-block;
+    margin: 0 30px;
+    li {
+      line-height: $navbar-height;
+      display: inline-block;
+      list-style: none;
+      padding: 0 15px;
+    }
+  }
+}
+
+.container {
+  padding: 20px;
+}
+
+.question {
+  height: 200px;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border-color: $error-color;
+}
+
+button[disabled], input[type=submit][disabled] {
+  cursor: not-allowed;
+  background-color: white;
+  border-color: $primary-inactive-font-color;
+  color: $primary-inactive-font-color;
+}
+
+button[disabled].button-primary,
+input[type=submit][disabled].button-primary {
+  background-color: $primary-inactive-color;
+  border-color: $primary-inactive-color;
+  color: $primary-inactive-font-color;
+}
