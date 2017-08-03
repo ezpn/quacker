@@ -19,5 +19,9 @@
   },
   "logging": {
     "level": "silly"
+  },
+  "static" : {
+    "root": "../web",
+    "format": false
   }
 }

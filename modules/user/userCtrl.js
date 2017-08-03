@@ -12,6 +12,6 @@ const UserCtrl = () => {
     name,
     router,
   };
-}
+};
 
 module.exports = UserCtrl();

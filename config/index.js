@@ -14,6 +14,8 @@ if (config.db.options.storage) {
   config.db.options.storage = path.join(__dirname, config.db.options.storage);
 }
 
-console.log(config);
+if (config.static.root) {
+  config.static.root = path.join(__dirname, config.static.root);
+}
 
 module.exports = config;
