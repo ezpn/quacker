@@ -1,8 +1,12 @@
-const Quack = require('./quackModel.js');
+const QuackModel = require('./quackModel');
+const QuackController = require('./quackCtrl')
 
 const QuackModule = {
   models: {
-    Quack,
+    QuackModel,
+  },
+  controllers: {
+    QuackController,
   },
 };
 

@@ -1,0 +1,14 @@
+<div class="row signup" ng-controller="SignupController">
+    <div class="twelve columns">
+        <h2>Quacks</h2>
+        <ul>
+            <li ng-repeat="quack in quacks.quacks">
+                <b>{{quack.User.username}}:</b> {{ quack.content }}
+            </li>
+        </ul>
+        <div ng-if="quacks.isLoggedIn">
+            <input type="text" ng-model="quacks.content" required />
+            <input type="submit" value="Send" ng-click="quacks.postQuack(quacks.content)" />
+        </div>
+    </div>
+</div>

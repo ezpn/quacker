@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="photostoryApp">
+<html ng-app="quackerApp">
     <head>
         <title>Quacker</title>
 
@@ -14,6 +14,9 @@
             <ul class="fright">
                 <li>
                     <a ng-if="!nav.isLoggedIn" ui-sref="login" ui-sref-active="active">Login</a>
+                    <span ng-if="!nav.isLoggedIn"> / </span>
+                    <a ng-if="!nav.isLoggedIn" ui-sref="signup" ui-sref-active="active">Sign up</a>
+                    <span ng-if="nav.isLoggedIn">{{nav.user.username}}</span>
                     <a ng-if="nav.isLoggedIn" ui-sref="logout" ui-sref-active="active">Logout</a>
                 </li>
             </ul>

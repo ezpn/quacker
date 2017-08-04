@@ -1,0 +1,31 @@
+<div class="row signup" ng-controller="SignupController">
+    <div class="twelve columns">
+        <h2>Sign up</h2>
+        <form name="form" novalidate class="signup-form">
+            <div class="row">
+                <div class="six columns">
+                    <label>Username</label>
+                    <div ng-show="form.$submitted || form.username.$touched">
+                        <span ng-show="form.username.$error.required">Username is required.</span>
+                        <span ng-show="form.username.$error.minlength">Username must have at least 3 characters.</span>
+                        <span ng-show="form.username.$error.maxlength">Username must have at most 63 characters.</span>
+                    </div>
+                    <input type="text" class="u-full-width" name="name" minlength="3" maxlength="63" ng-model="signup.register.username" required />
+                </div>
+                <div class="six columns">
+                    <label>Password</label>
+                    <div ng-show="form.$submitted || form.password.$touched">
+                        <span ng-show="form.password.$error.required">Password is required.</span>
+                        <span ng-show="form.password.$error.maxlength">Password must have at most 255 characters.</span>
+                    </div>
+                    <input type="password" class="u-full-width" name="password" maxlength="255" ng-model="signup.register.password" required />
+                </div>
+            </div>
+            <div class="row">
+                <div class="twelve columns">
+                    <input type="submit" class="button-primary" ng-disabled="form.$invalid" ng-click="signup.submit(signup.register)" value="Submit" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

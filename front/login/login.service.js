@@ -4,7 +4,8 @@ export default class LoginService {
     this.observerCallbacks = [];
     this.$state = $state;
     this.$timeout = $timeout;
-    this.setIsLoggedIn(this.checkAuth());
+    this.user = null;
+    this.setIsLoggedIn(false);
   }
 
   setIsLoggedIn(isLoggedIn) {
@@ -44,8 +45,6 @@ export default class LoginService {
     localStorage.removeItem(this.localStorageKey);
     this.setIsLoggedIn(false);
 
-    // @todo Fix gallery protection!
-
     return this.$state.go('home');
   }
 
@@ -53,20 +52,14 @@ export default class LoginService {
     return this.$state.go('login');
   }
 
-  checkAuth() {
-    const jwt = localStorage.getItem(this.localStorageKey);
-
-    return jwt != null;
-  }
-
-  login(token) {
-    this.storeToken(token);
+  setUser(user) {
+    console.log('seti u', user);
+    this.user = user;
     this.setIsLoggedIn(true);
-    console.log('Im logged in');
   }
 
-  storeToken(token) {
-    localStorage.setItem(this.localStorageKey, token);
+  getUser() {
+    return this.user;
   }
 }
 

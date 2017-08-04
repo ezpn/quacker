@@ -4,20 +4,8 @@ const User = (sequelize, DataTypes) => {
       type: DataTypes.STRING(63),
       allowNull: false,
     },
-    email: {
-      type: DataTypes.STRING(255),
-      allowNull: false,
-      validate: {
-        isEmail: true,
-      },
-    },
-    isConfirmed: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue: 0,
-    },
-    confirmCode: {
-      type: DataTypes.STRING(14),
+    password: {
+      type: DataTypes.STRING(64),
       allowNull: false,
     },
   });
